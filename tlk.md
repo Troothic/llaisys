@@ -1,0 +1,1 @@
+D:\Anoconda\envs\llaisys\python.exe test/test_infer.py --model models/DeepSeek-R1-Distill-Qwen-1.5B
