@@ -89,7 +89,7 @@ void Qwen2Model::reset_kv_cache() {
 // 注意力层前向传播
 void Qwen2Model::forward_attention(size_t layer, tensor_t hidden, tensor_t pos_ids) {
     size_t seq_len = hidden->shape()[0];
-    size_t hs = _meta.hs;
+    size_t hs = _meta.hs; (void)hs;  // suppress unused warning
     size_t nh = _meta.nh;
     size_t nkvh = _meta.nkvh;
     size_t dh = _meta.dh;
@@ -163,7 +163,7 @@ void Qwen2Model::forward_attention(size_t layer, tensor_t hidden, tensor_t pos_i
 // MLP层前向传播
 void Qwen2Model::forward_mlp(size_t layer, tensor_t hidden) {
     size_t seq_len = hidden->shape()[0];
-    size_t hs = _meta.hs;
+    size_t hs = _meta.hs; (void)hs;  // suppress unused warning
     size_t di = _meta.di;
     
     // 1. gate投影
